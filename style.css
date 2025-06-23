@@ -1,0 +1,88 @@
+/* estilo.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+section {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: calc(100% - 22px);
+    max-width: 300px;
+    display: block;
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background: #2980b9;
+}
+
+#aviso {
+    color: #d35400;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#resultados div {
+    background-color: #ecf0f1;
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 5px solid #2980b9;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+#resultados div:hover {
+    transform: scale(1.01);
+}

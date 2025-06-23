@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ListaLivros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Livros</h1>
+    </header>
+    <section>
+        <P>
+            Título: <input type="text" id="titulo">
+            Autor: <input type="text" id="autor">
+            Ano de Publicação: <input type="number" id="AnoPublicacao" >
+            <input type="button" value="Adicionar" id="adicionar">
+        </P>
+    </section>
+    <section id="aviso" hidden>
+    </section>
+    <section id="resultadoBusca">
+        <p>
+            Pesquise por livros específicos: <input type="text" id="inputBusca">
+            <input type="button" value="Buscar" id="buscar">
+        </p>
+    </section>
+    <section id="resultados" hidden>
+    </section>
+    <script type="module" src="ListaLivros.js"></script>
+</body>
+</html>
+<!-- Desenvolver uma aplicação web simples que permita ao usuário cadastrar livros, visualizar a lista cadastrada, pesquisar e remover livros. Dessa forma, você praticará manipulação de dados via input, controle de fluxo (condicionais e laços), utilização de arrays e funções, manipulação da DOM e, de forma opcional, utilizar conceitos de POO para organizar melhor seu código. -->
