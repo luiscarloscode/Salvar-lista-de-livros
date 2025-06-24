@@ -65,15 +65,23 @@ function SetElementsOnHTML(C, R, Aviso){
 }
 
 //let catalogoMapeado
-
 function procurarLivro(catalogo, search, resultado, aviso){
-        let catalogoMapeado = catalogo.map( function(livro){
+        let resultadoBusca = []
+        /*let catalogoMapeado = catalogo.map( function(livro){
         if(livro.nome.toUpperCase().includes(search.value.toUpperCase())){
             return livro
         }
+        console.log(catalogoMapeado)
     })
+    console.log(catalogo)
     console.log(catalogoMapeado)
-    SetElementsOnHTML(catalogoMapeado, resultado, aviso)  
+    SetElementsOnHTML(catalogoMapeado, resultado, aviso)*/
+    for (let i = 0; i < catalogo.length; i++){
+        if  (catalogo[i].nome.toUpperCase().includes(search.value.toUpperCase())){
+            resultadoBusca.push(catalogo[i])
+        }        
+    }
+    SetElementsOnHTML(resultadoBusca, resultado, aviso)  
 }
 
 export default {
