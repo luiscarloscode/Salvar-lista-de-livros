@@ -64,22 +64,15 @@ function SetElementsOnHTML(C, R, Aviso){
     }
 }
 
-//let catalogoMapeado
 function procurarLivro(catalogo, search, resultado, aviso){
         let resultadoBusca = []
-        /*let catalogoMapeado = catalogo.map( function(livro){
-        if(livro.nome.toUpperCase().includes(search.value.toUpperCase())){
-            return livro
-        }
-        console.log(catalogoMapeado)
-    })
-    console.log(catalogo)
-    console.log(catalogoMapeado)
-    SetElementsOnHTML(catalogoMapeado, resultado, aviso)*/
     for (let i = 0; i < catalogo.length; i++){
         if  (catalogo[i].nome.toUpperCase().includes(search.value.toUpperCase())){
             resultadoBusca.push(catalogo[i])
         }        
+    }
+    if (resultadoBusca.length > 0){
+        resultado.hidden = false
     }
     SetElementsOnHTML(resultadoBusca, resultado, aviso)  
 }
