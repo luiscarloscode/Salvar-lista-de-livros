@@ -7,6 +7,7 @@ function deletarLivro(Catalog, deletada, R, A){
         }
     }
     Catalog.splice(Catalog.length - 1, 1)
+    localStorage.setItem('CatalogoSalvo', JSON.stringify(Catalog));
     A.innerText = "Livro excluído"
     return SetElementsOnHTML(Catalog, R, A);
 }
@@ -26,6 +27,7 @@ function CatalogoSetValue(T, An, Au, C){
         autor: Au.value
     }
     C.push(livro)
+    localStorage.setItem('CatalogoSalvo', JSON.stringify(C));
 }
 
 function DadoNaoCadastrado(Catal, T, Au){
@@ -65,7 +67,7 @@ function SetElementsOnHTML(C, R, Aviso){
 }
 
 function procurarLivro(catalogo, search, resultado, aviso){
-        let resultadoBusca = []
+    let resultadoBusca = []
     for (let i = 0; i < catalogo.length; i++){
         if  (catalogo[i].nome.toUpperCase().includes(search.value.toUpperCase())){
             resultadoBusca.push(catalogo[i])

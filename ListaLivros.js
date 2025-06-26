@@ -1,5 +1,5 @@
 import processar from './funcoes.js'
-var catalogo = []
+var catalogo = JSON.parse(localStorage.getItem('CatalogoSalvo')) || []
 
 let adicionar = window.document.getElementById("adicionar")
 adicionar.addEventListener("click", salvar)
@@ -34,4 +34,11 @@ let inputBusca = window.document.querySelector("input#inputBusca")
 
 buttonBusca.addEventListener("click", function (){
     processar.fprocurarLivro(catalogo, inputBusca, resultados, aviso)
+})
+
+window.addEventListener("load", function(){
+    if (catalogo.length > 0){
+        resultados.hidden = false
+        processar.fSetElementsOnHTML(catalogo, resultados, aviso)
+    } 
 })
